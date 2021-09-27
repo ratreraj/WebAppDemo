@@ -1,0 +1,58 @@
+﻿@model WebAppDemo.Enttities.AssetsDetails
+
+@{
+    ViewData["Title"] = "AddAsset";
+}
+
+<h1>AddAsset</h1>
+
+<h4>AssetsDetails</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddAsset">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="AssestName" class="control-label"></label>
+                <input asp-for="AssestName" class="form-control" />
+                <span asp-validation-for="AssestName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AssetType" class="control-label"></label>
+                <input asp-for="AssetType" class="form-control" />
+                <span asp-validation-for="AssetType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CuurValueAssest" class="control-label"></label>
+                <input asp-for="CuurValueAssest" class="form-control" />
+                <span asp-validation-for="CuurValueAssest" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Status" class="control-label"></label>
+                <input asp-for="Status" class="form-control" />
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AddentionalProperty" class="control-label"></label>
+                <input asp-for="AddentionalProperty" class="form-control" />
+                <span asp-validation-for="AddentionalProperty" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AddentionalPropertyItem" class="control-label"></label>
+                <input asp-for="AddentionalPropertyItem" class="form-control" />
+                <span asp-validation-for="AddentionalPropertyItem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
